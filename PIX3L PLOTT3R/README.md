@@ -1,4 +1,4 @@
-This is the folder for our project PIX3L PLOTT3R
+<h1>PIX3L PLOTT3R Project</h1>
 
 The robot can print from image file. The python code 
 
@@ -15,6 +15,8 @@ The python code is using [Python on ev3dev](https://github.com/rhempel/ev3dev-la
 
         sudo apt-get dist-upgrade
 
+
+<b><i>You will need to download the contents of this folder before continuing</i></b>
 
 *   Run Black and White Code:
   
