@@ -2,6 +2,11 @@
 
 The robot can print from any image file using python!
 
+We provide code to print in black & white and color.
+We also provide sample images.
+
+
+
 *   Prerequisites:
 *   
         sudo apt-get update
@@ -23,4 +28,8 @@ The robot can print from any image file using python!
 *   Run Color Code:
 
         sudo python printcolor.py sample\ images/color/IMAGE_HERE.png
+        
+The color printing program will print 4 times with different pens. The code understands red, green, blue, and black and will automatically split images up into these colors.
+
+When presented with a dialogue, type <code>" "</code> and press enter to continue. If the dialogue prints a color, switch the pen to that color, then continue. 
   
