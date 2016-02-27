@@ -38,5 +38,4 @@ The color printing program will print 4 times with different pens. The code unde
 
 When presented with a dialogue, type <code>" "</code> and press enter to continue. If the dialogue prints a color, switch the pen to that color, then continue. 
 
-Video of printer:
-<iframe width="854" height="480" src="https://www.youtube.com/embed/O449N-ttY7E" frameborder="0" allowfullscreen></iframe>
+
