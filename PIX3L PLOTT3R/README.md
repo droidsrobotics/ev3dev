@@ -1,6 +1,6 @@
 <h1>PIX3L PLOTT3R Project</h1>
 
-The robot can print from image file. The python code 
+The robot can print from image file using python!
 
 The python code is using [Python on ev3dev](https://github.com/rhempel/ev3dev-lang-python).
 
