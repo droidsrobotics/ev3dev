@@ -23,7 +23,7 @@ We also provide sample images.
 *   Download this folder:
 *   
         sudo apt-get install git
-        git pull https://github.com/droidsrobotics/ev3dev.git
+        git clone https://github.com/droidsrobotics/ev3dev.git
         cd ev3dev/PIX3L\ PLOTT3R
 
 *   Run Black and White Code:
