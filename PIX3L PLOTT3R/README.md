@@ -12,7 +12,7 @@ We also provide sample images.
 *   
         sudo apt-get update
         sudo apt-get upgrade
-        sudo apt-get install python-pip
+        sudo apt-get install python-pip git
         sudo pip install python-ev3dev termcolor pillow
 
 *   The ev3dev version should be the latest. To upgrade:
@@ -22,7 +22,6 @@ We also provide sample images.
 
 *   Download this folder:
 *   
-        sudo apt-get install git
         git clone https://github.com/droidsrobotics/ev3dev.git
         cd ev3dev/PIX3L\ PLOTT3R
 
