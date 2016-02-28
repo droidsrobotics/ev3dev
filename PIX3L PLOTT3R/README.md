@@ -12,7 +12,7 @@ We also provide sample images.
 *   
         sudo apt-get update
         sudo apt-get upgrade
-        sudo apt-get install python-pip git
+        sudo apt-get install python-pip git imagemagick
         sudo pip install python-ev3dev termcolor pillow
 
 *   The ev3dev version should be the latest. To upgrade:
