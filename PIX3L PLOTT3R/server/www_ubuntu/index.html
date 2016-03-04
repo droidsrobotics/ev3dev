@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<head>
+<title>EV3 Printer Web Interface</title>
+<link rel="stylesheet" type="text/css" href="./style.css" />
+<script src="modernizr-1.6.min.js"></script>
+<script src="finger_painting.js"></script>
+</head>
+<body>
+  
+<style>
+/* Some CSS styling */
+#sketchpadapp {
+    /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.leftside {
+    float:left;
+    width:220px;
+    height:285px;
+    background-color:#def;
+    padding:10px;
+    border-radius:4px;
+}
+.rightside {
+    float:left;
+    margin-left:10px;
+}
+#sketchpad {
+    float:left;
+    height:300px;
+    width:400px;
+    border:2px solid #888;
+    border-radius:4px;
+    position:relative; /* Necessary for correct mouse co-ords in Firefox */
+}
+#clearbutton {
+    font-size: 15px;
+    padding: 10px;
+    -webkit-appearance: none;
+    background: #eee;
+    border: 1px solid #888;
+}
+</style>
+
+
+
+    <div id="sketchpadapp">
+        <div class="leftside">
+             Draw what you want the robot to print.<br/><br/>
+           Then press the print button.<br/><br/>
+             <input type="submit" value="Clear Sketchpad" id="clearbutton" onclick="sketcher.clear();"><br><a style="font-size:50px" download="data.png" onclick=" var dataURL = sketch.toDataURL('image/png');
+    this.href = dataURL;" href="">Print</a>
+        </div>
+        <div class="rightside">
+           <script src="js/jquery-1.7.min.js"></script>
+<script src="js/modernizr.custom.34982.js"></script>
+
+<script src="js/sketcher.js"></script>
+<script src="js/trigonometry.js"></script>
+<script>
+var sketcher = null;
+
+$(document).ready(function(e) {
+	
+	sketcher = new Sketcher( "sketch" );
+});
+
+
+</script>
+
+    <canvas id="sketch" width="500" height="300" />
+
+    <script>
+var canvas = document.getElementById("sketch");
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "white";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+    </script>
+
+
+
+<br>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br>
+  
+<canvas  id='textCanvas' height=120></canvas>
+<img id='image'>
+<br>
+  <input type="text" style="font-size:20px;" id='text'><br><a style="font-size:20px;" download="data.png" onclick=" var dataURL = textCanvas.toDataURL('image/png');
+    this.href = dataURL;" href="">Print Text</a>
+
+  <style>
+canvas{
+    border: 1px black solid;
+}
+#textCanvas{
+    display: none;
+}
+    </style>
+<script>
+var tCtx = document.getElementById('textCanvas').getContext('2d'),
+    imageElem = document.getElementById('image');
+document.getElementById('text').addEventListener('keyup', function (){
+tCtx.canvas.width = tCtx.measureText(this.value).width;
+tCtx.fillStyle = "white";
+tCtx.fillRect(0, 0, 1000, 1000);
+tCtx.font = "100px Arial";
+tCtx.fillStyle = "black";
+tCtx.fillText(this.value, 0, 80);
+imageElem.src = tCtx.canvas.toDataURL();
+    console.log(imageElem.src);
+}, false);
+    </script>
+</body>
+
+</html>
