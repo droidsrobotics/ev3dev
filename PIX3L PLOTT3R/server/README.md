@@ -38,5 +38,5 @@ You will also need to replace <code>robot</code> and <code>maker</code> in print
   
         cd ~/
         python printer.py
-        http://localhost/
+        <a href="http://localhost/">http://localhost/</a>
 
