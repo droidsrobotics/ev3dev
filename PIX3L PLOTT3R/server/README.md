@@ -1,40 +1,42 @@
-<h1>PIX3L PLOTT3R Project</h1>
-<img src="https://scontent-iad3-1.xx.fbcdn.net/hphotos-xlt1/v/t1.0-9/12742519_1509710212669723_4304083322119299525_n.jpg?oh=b11d74b98a01d2f8db4a8b8aaad7529b&oe=57548740">
+<h1>PIX3L PLOTT3R Web Interface</h1>
 
-The robot can print from any image file using python!
+The ev3 printer now has a web interface where you can type text and draw!
 
-We provide code to print in black & white and color.
-We also provide sample images.
+This has been tested using Firefox on Ubuntu.
 
 
 
-*   Prerequisites:
+*   Prerequisites (Ubuntu):
 *   
         sudo apt-get update
         sudo apt-get upgrade
-        sudo apt-get install python-pip git imagemagick
-        sudo pip install python-ev3dev termcolor pillow
+        sudo apt-get install apache2 sshpass
 
 *   The ev3dev version should be the latest. To upgrade:
 
         sudo apt-get dist-upgrade
 
 
-*   Download this folder:
+*   Download this folder (Ubuntu):
 *   
         git clone https://github.com/droidsrobotics/ev3dev.git
-        cd ev3dev/PIX3L\ PLOTT3R
+        cd ev3dev/PIX3L\ PLOTT3R/server
+        cp home_ubuntu/* ~/
+        sudo cp -r www_ubuntu/* /var/www/html/
 
-*   Run Black and White Code:
+*   Download this folder (EV3):
+*   
+        git clone https://github.com/droidsrobotics/ev3dev.git
+        cd ev3dev/PIX3L\ PLOTT3R/server
+        cp ev3_home/* ~/
+
+You will need to replace <code>192.168.43.22</code> in printer.py with the ev3's ip address
+You will also need to replace <code>robot</code> and <code>maker</code> in printer.(py)/(sh) with your ev3 username and password.
+(printer.py is on the Ubuntu computer and printer.sh is on the ev3)
+
+*   Run Code (Ubuntu):
   
-        sudo python printmonochrome.py "sample\ images/monochrome/IMAGE_HERE.jpg"
-
-*   Run Color Code:
-
-        sudo python printcolor.py "sample\ images/color/IMAGE_HERE.png"
-        
-The color printing program will print 4 times with different pens. The code understands red, green, blue, and black and will automatically split images up into these colors. The file <code>printcolor-use-color-sensor.py</code> uses the color sensor to reset the paper position for each color.
-
-When presented with a dialogue, type <code>" "</code> and press enter to continue. If the dialogue prints a color, switch the pen to that color, then continue. 
-
+        cd ~/
+        python printer.py
+        http://localhost/
 
