@@ -10,7 +10,7 @@ This has been tested using Firefox on Ubuntu.
 *   
         sudo apt-get update
         sudo apt-get upgrade
-        sudo apt-get install apache2 sshpass
+        sudo apt-get install apache2 sshpass php5 libapache2-mod-php5 php5-mcrypt
 
 *   The ev3dev version should be the latest. To upgrade:
 
