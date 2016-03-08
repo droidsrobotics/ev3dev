@@ -37,6 +37,9 @@ You will also need to replace <code>robot</code> and <code>maker</code> in print
 *   Run Code (Ubuntu):
   
         cd ~/
-        python printer.py
+        mkdir files
+        mkdir lock
+        python printer.py &
+        python sendprint.py 
         Go to http://localhost/ in Firefox
 
