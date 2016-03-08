@@ -25,7 +25,6 @@ This has been tested using Firefox on Ubuntu.
         sudo cp -r www_ubuntu/* /var/www/html/
 
 *   Download this folder (EV3):
-*   
         <code>git clone https://github.com/droidsrobotics/ev3dev.git</code><br>
         <code>cd ev3dev/PIX3L\ PLOTT3R/server</code><br>
         <code>cp ev3_home/* ~/</code><br>
