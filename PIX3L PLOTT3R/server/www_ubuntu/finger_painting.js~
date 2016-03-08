@@ -46,7 +46,7 @@ function canvasApp(){
 	theCanvas.addEventListener('touchstart', touch_pressed_down, false);
 
 	var imageObj = new Image();
-//	imageObj.src = 'mat.jpg';
+	imageObj.src = 'mat.jpg';
         imageObj.onload = function() {
             context.drawImage(imageObj, 0, 0, theCanvas.width, theCanvas.height);
         };
