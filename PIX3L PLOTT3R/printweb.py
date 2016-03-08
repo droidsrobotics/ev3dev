@@ -3,8 +3,7 @@
 
 #install --> (sudo) apt-get install python-pip --> (sudo) pip install pillow python-ev3dev
 #running --> run (sudo) python pythonfilename.py imagefilename.png (jpg will work along with others types) -->
-#            you will be given a dialogue --> just type "" and return/enter to continue
-
+#This version is optimised for a 500x300 image --> made for web interface
 from PIL import Image, ImageFilter
 import ev3dev.ev3 as ev3
 import time
@@ -76,7 +75,6 @@ def makedot():
 
 #resise and flip image
 filename = sys.argv[1]
-#cmd = "convert " + filename + " -threshold 90% -flop -resize "+ str(res) +"  -flatten print.jpg"
 cmd = "convert "+ filename +" -flatten -flop -resize 83 +dither -colors 2 -colorspace gray -normalize print.jpg"
 os.system(cmd) #execute command
 image_file = Image.open('print.jpg') # open image print.jpg in current directory
